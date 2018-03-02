@@ -56,10 +56,10 @@ public class Triangle_Probability{
     }
 }
 
-/*----------------------------------SAMPLE OUTPUTS-------------------------------------------
-Enter number of breaks: 2    | Enter number of breaks: 3	 | 	Enter number of breaks: 5   |
-                             |								 |     	                        |
-Trials: 10000000             |	Trials: 10000000			 |	Trials: 10000000            |
-Pieces per trial: 3          |  Pieces per trial: 4			 |	Pieces per trial: 6         |
-Number of Triangles: 3863117 |  Number of Triangles: 7353758 |	Number of Triangles: 9811368|
-~Probability: 38.63117%      |  ~Probability: 73.53758%		 |	~Probability: 98.11368%     |*/
+/*---------------------SAMPLE OUTPUTS-------------------------
+Enter number of breaks: 2    |  Enter number of breaks: 5	 |
+                             |								 |
+Trials: 10000000             |	Trials: 10000000			 |
+Pieces per trial: 3          |  Pieces per trial: 4			 |
+Number of Triangles: 3863117 |  Number of Triangles: 7353758 |
+~Probability: 38.63117%      |  ~Probability: 73.53758%		 |*/
