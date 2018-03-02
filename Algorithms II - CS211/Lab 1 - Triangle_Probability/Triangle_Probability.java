@@ -57,7 +57,7 @@ public class Triangle_Probability{
 }
 
 /*---------------------SAMPLE OUTPUTS-------------------------
-Enter number of breaks: 2    |  Enter number of breaks: 5	 
+Enter number of breaks: 2    |  Enter number of breaks: 3	 
                              |								 
 Trials: 10000000             |	Trials: 10000000			 
 Pieces per trial: 3          |  Pieces per trial: 4			 
