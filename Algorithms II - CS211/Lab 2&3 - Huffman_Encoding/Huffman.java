@@ -132,10 +132,10 @@ class Huffman{
 
         boolean isLeaf = Bin_IO.readBoolean();
         if (isLeaf) {
-            return new HuffNode(Bin_IO.readChar(), -1, null, null);
+            return new HuffNode(Bin_IO.readChar(), 0, null, null);
         }
         else {
-            return new HuffNode('\0', -1, decodeHuffTree(), decodeHuffTree());
+            return new HuffNode('-', 0, decodeHuffTree(), decodeHuffTree());
         }
     }
 }
