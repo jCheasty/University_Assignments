@@ -83,7 +83,7 @@ class Huffman{
         Bin_IO.out.close();
     }
 
-    private static HuffNode buildTree(int[]freqs){
+    private static HuffNode buildTree(int[] freqs){
 
         PriorityQueue<HuffNode> hq = new PriorityQueue<>(Comparator.comparingInt(h -> h.freq));
 
