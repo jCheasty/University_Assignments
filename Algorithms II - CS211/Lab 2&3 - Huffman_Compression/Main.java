@@ -1,3 +1,10 @@
+/*The advanced programming challenge is to finish your algorithm off by creating a
+real viable compressor application which reads in a file and compresses it into a
+smaller file. You will have to store the translation table in the compressed file in
+order to be able to decompress it, and store the 1s and 0s as true binary, rather than
+ASCII symbols!*/
+
+
 import java.io.File;
 import java.io.IOException;
 import java.util.Objects;
