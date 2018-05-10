@@ -1,18 +1,8 @@
-/*
- * The Main class searches a modified dictionary for words
- * that may be used in a game of Scrabble given a set of letters including
- * space tiles/wildcards and presents them sorted by length and max score.
- *
- * It's also possible to include a prefix and/or a suffix already on the board
- * so that they may be included an eligible word.
- */
-
 import java.io.*;
 import java.util.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.stream.Stream;
-
 
 class valid_words{
 
@@ -31,7 +21,31 @@ class valid_words{
     }
 }
 
-
+/**
+ * Advanced Exercise Brief:
+ * Add in more features to make the program more usable for Scrabble,
+ * such as specifying letters that MUST be used, thus allowing the word to
+ * be connected with another on the board.
+ *
+ * Class Summary:
+ * The purpose of the {@code Main} class is to extract valid words from a modified dictionary
+ * for use in a game of Scrabble. The user can specify a space tile or wildcard by inputting
+ * an underscore when prompted for their letters. A prefix or/and a suffix can also be used to
+ * join eligible words with words already in play.
+ * The results table features any valid words of variable lengths which are prioritised by the
+ * maximum possible score according to the rules of Scrabble.
+ * (See example test cases below code.)
+ *
+ * @author John Cheasty
+ * @version 1.1
+ *
+ * Updates from version 1.0:
+ * -Integrated wildcard functionality.
+ * -Added prefix/suffix feature.
+ * -Created {@code valid_words} to manage sorting.
+ * -Improved output formatting.
+ *
+ */
 public class Main{
 
     private static final HashMap<Character, Integer> scores = new HashMap<>();
@@ -86,6 +100,7 @@ public class Main{
         if(isEmpty)
             System.out.println("No matching words could be found.");
         else {
+            System.out.println("\nFormatting: *valid word:(score)*");
             valid_words temp;
             for (int i = 0; i < lim; i++) {
                 res.get(i).sort(valid_words.compare_score.reversed());
@@ -186,11 +201,31 @@ public class Main{
 }
 
 /*---------------Sample Output--------------------
-Test 1:
+Test 0:
 
-    Enter letters(use underscore for a wildcard): adnop___
+Enter letters(use underscore for a wildcard): sdreletw
 Include an active/in play prefix? (y/n): n
 Include an active/in play suffix? (y/n): n
+
+Formatting: *valid word:(score)*
+
+2 letter words:              we:(5 ) |              de:(3 ) |              ed:(3 ) |              el:(2 ) |              er:(2 ) |
+3 letter words:             dew:(7 ) |             wed:(7 ) |             ewe:(6 ) |             sew:(6 ) |             tew:(6 ) |
+4 letter words:            dews:(8 ) |            drew:(8 ) |            lewd:(8 ) |            weds:(8 ) |            weed:(8 ) |
+5 letter words:           dwelt:(9 ) |           rewed:(9 ) |           sewed:(9 ) |           swede:(9 ) |           tewed:(9 ) |
+6 letter words:          lewder:(10) |          reweds:(10) |          reweld:(10) |          slewed:(10) |          stewed:(10) |
+7 letter words:         lewdest:(11) |         rewelds:(11) |         strewed:(11) |         welders:(11) |         wrested:(11) |
+8 letter words:        lewdster:(12) |        wrestled:(12) |
+
+
+
+Test 1:
+
+Enter letters(use underscore for a wildcard): adnop___
+Include an active/in play prefix? (y/n): n
+Include an active/in play suffix? (y/n): n
+
+Formatting: *valid word:(score)*
 
 2 letter words:              ax:(9 ) |              ex:(9 ) |              jo:(9 ) |              ox:(9 ) |              xi:(9 ) |
 3 letter words:             zax:(19) |             zek:(16) |             fez:(15) |             fiz:(15) |             pyx:(15) |
@@ -208,6 +243,8 @@ Enter prefix: c
 Include an active/in play suffix? (y/n): y
 Enter suffix: ing
 
+Formatting: *valid word:(score)*
+
 5 letter words:           cling:(8 ) |           cuing:(8 ) |
 6 letter words:          coxing:(16) |          caking:(13) |          coking:(13) |          caving:(12) |          cawing:(12) |
 7 letter words:         cozying:(22) |         crazing:(19) |         choking:(17) |         coaxing:(17) |         chafing:(16) |
@@ -222,6 +259,8 @@ Include an active/in play prefix? (y/n): y
 Enter prefix: zoo
 Include an active/in play suffix? (y/n): y
 Enter suffix: graphical
+
+Formatting: *valid word:(score)*
 
 15 letter words: zoogeographical:(33) |
 
