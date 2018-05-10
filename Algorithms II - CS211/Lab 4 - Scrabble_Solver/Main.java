@@ -17,7 +17,7 @@ class valid_words{
     public static Comparator<valid_words> compare_score = Comparator.comparingInt(o -> o.score);
 
     protected void print(){
-        System.out.printf("%15s:(%-2s) | ", this.word, this.score);
+        System.out.printf("%-15s:(%-2s) | ", this.word, this.score);
     }
 }
 
@@ -104,7 +104,7 @@ public class Main{
             valid_words temp;
             for (int i = 0; i < lim; i++) {
                 res.get(i).sort(valid_words.compare_score.reversed());
-                System.out.print((!res.get(i).isEmpty() ? "\n" + (i + 2) + " letter words: " : ""));
+                System.out.printf("%-20s",( !res.get(i).isEmpty() ? "\n" + (i + 2) + " letter words: " : ""));
                 for (int j = 0; j < res.get(i).size() && j < 5; j++) {
                     temp = res.get(i).get(j);
                     temp.print();
@@ -209,13 +209,13 @@ Include an active/in play suffix? (y/n): n
 
 Formatting: *valid word:(score)*
 
-2 letter words:              we:(5 ) |              de:(3 ) |              ed:(3 ) |              el:(2 ) |              er:(2 ) |
-3 letter words:             dew:(7 ) |             wed:(7 ) |             ewe:(6 ) |             sew:(6 ) |             tew:(6 ) |
-4 letter words:            dews:(8 ) |            drew:(8 ) |            lewd:(8 ) |            weds:(8 ) |            weed:(8 ) |
-5 letter words:           dwelt:(9 ) |           rewed:(9 ) |           sewed:(9 ) |           swede:(9 ) |           tewed:(9 ) |
-6 letter words:          lewder:(10) |          reweds:(10) |          reweld:(10) |          slewed:(10) |          stewed:(10) |
-7 letter words:         lewdest:(11) |         rewelds:(11) |         strewed:(11) |         welders:(11) |         wrested:(11) |
-8 letter words:        lewdster:(12) |        wrestled:(12) |
+2 letter words:    we             :(5 ) | de             :(3 ) | ed             :(3 ) | el             :(2 ) | er             :(2 ) |
+3 letter words:    dew            :(7 ) | wed            :(7 ) | ewe            :(6 ) | sew            :(6 ) | tew            :(6 ) |
+4 letter words:    dews           :(8 ) | drew           :(8 ) | lewd           :(8 ) | weds           :(8 ) | weed           :(8 ) |
+5 letter words:    dwelt          :(9 ) | rewed          :(9 ) | sewed          :(9 ) | swede          :(9 ) | tewed          :(9 ) |
+6 letter words:    lewder         :(10) | reweds         :(10) | reweld         :(10) | slewed         :(10) | stewed         :(10) |
+7 letter words:    lewdest        :(11) | rewelds        :(11) | strewed        :(11) | welders        :(11) | wrested        :(11) |
+8 letter words:    lewdster       :(12) | wrestled       :(12) |
 
 
 
@@ -227,13 +227,13 @@ Include an active/in play suffix? (y/n): n
 
 Formatting: *valid word:(score)*
 
-2 letter words:              ax:(9 ) |              ex:(9 ) |              jo:(9 ) |              ox:(9 ) |              xi:(9 ) |
-3 letter words:             zax:(19) |             zek:(16) |             fez:(15) |             fiz:(15) |             pyx:(15) |
-4 letter words:            jazz:(29) |            razz:(22) |            hajj:(21) |            fozy:(19) |            hazy:(19) |
-5 letter words:           pizza:(25) |           zanza:(23) |           zazen:(23) |           zappy:(21) |           qophs:(19) |
-6 letter words:          zapped:(20) |          zonked:(20) |          jalopy:(18) |          judoka:(18) |          podzol:(18) |
-7 letter words:         hexapod:(20) |         bandbox:(19) |         madzoon:(19) |         opaqued:(19) |         quondam:(19) |
-8 letter words:        expandor:(18) |        pandowdy:(18) |        diaphony:(17) |        downplay:(17) |        playdown:(17) |
+2 letter words:    ax             :(9 ) | ex             :(9 ) | jo             :(9 ) | ox             :(9 ) | xi             :(9 ) |
+3 letter words:    zax            :(19) | zek            :(16) | fez            :(15) | fiz            :(15) | pyx            :(15) |
+4 letter words:    jazz           :(29) | razz           :(22) | hajj           :(21) | fozy           :(19) | hazy           :(19) |
+5 letter words:    pizza          :(25) | zanza          :(23) | zazen          :(23) | zappy          :(21) | qophs          :(19) |
+6 letter words:    zapped         :(20) | zonked         :(20) | jalopy         :(18) | judoka         :(18) | podzol         :(18) |
+7 letter words:    hexapod        :(20) | bandbox        :(19) | madzoon        :(19) | opaqued        :(19) | quondam        :(19) |
+8 letter words:    expandor       :(18) | pandowdy       :(18) | diaphony       :(17) | downplay       :(17) | playdown       :(17) |
 
 Test 2:
 
@@ -245,12 +245,12 @@ Enter suffix: ing
 
 Formatting: *valid word:(score)*
 
-5 letter words:           cling:(8 ) |           cuing:(8 ) |
-6 letter words:          coxing:(16) |          caking:(13) |          coking:(13) |          caving:(12) |          cawing:(12) |
-7 letter words:         cozying:(22) |         crazing:(19) |         choking:(17) |         coaxing:(17) |         chafing:(16) |
-8 letter words:        calquing:(20) |        chaffing:(20) |        cajoling:(18) |        chalking:(18) |        charking:(18) |
-9 letter words:       coffering:(18) |       crackling:(18) |       comparing:(16) |       crankling:(16) |       cavorting:(15) |
-10 letter words:      calorizing:(22) |      clarifying:(19) |      coalifying:(19) |      conflating:(16) |      caprioling:(15) |
+5 letter words:    cling          :(8 ) | cuing          :(8 ) |
+6 letter words:    coxing         :(16) | caking         :(13) | coking         :(13) | caving         :(12) | cawing         :(12) |
+7 letter words:    cozying        :(22) | crazing        :(19) | choking        :(17) | coaxing        :(17) | chafing        :(16) |
+8 letter words:    calquing       :(20) | chaffing       :(20) | cajoling       :(18) | chalking       :(18) | charking       :(18) |
+9 letter words:    coffering      :(18) | crackling      :(18) | comparing      :(16) | crankling      :(16) | cavorting      :(15) |
+10 letter words:   calorizing     :(22) | clarifying     :(19) | coalifying     :(19) | conflating     :(16) | caprioling     :(15) |
 
 Test 3:
 
@@ -262,7 +262,7 @@ Enter suffix: graphical
 
 Formatting: *valid word:(score)*
 
-15 letter words: zoogeographical:(33) |
+15 letter words:   zoogeographical:(33) |
 
 Test 4:
 
